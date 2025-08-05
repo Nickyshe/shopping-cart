@@ -19,7 +19,7 @@ function ProductItem({ product, onAddToCart, isSelected, onCardSelect }) {
   };
 
   // Use desktop image for better quality, fallback to thumbnail if image fails to load
-  const imageSrc = imageError ? '/src/assets/images/image-waffle-desktop.jpg' : product.image.desktop;
+  const imageSrc = imageError ? product.image.thumbnail : product.image.desktop;
 
   return (
     <div className="card" tabIndex={0} onKeyPress={handleKeyPress} onClick={handleCardClick}>
